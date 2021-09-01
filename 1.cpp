@@ -21,16 +21,30 @@ using namespace std;
 
 void testcase()
 {
+   int n;
+   cin>>n;
+   string s;
+   cin>>s;
+   int c=0;
+   cout<<"1"<<" ";
+   for(int i=1;i<n;i++)
+   {
+    if(int(s[i])>int(s[i-1]))
+        c++;
+    else
+        c=0;
     
-     int n;
-    cin>>n;
+    cout<<c+1<<" ";
     
-    for(int i=1;i<n;i++)
-    {
-         cout<<(i+1)<<" " ;     
-    }
-    cout<<"1";
    }
+
+
+
+
+
+ 
+
+}
 
 int main()
 {
@@ -48,8 +62,12 @@ int main()
     cin>>t;
     for(int i=1;i<=t;i++)
     {
-     cout<<"\n";
+     
+    
+    cout<<"Case #"<<i<<": "; 
     testcase();
+    cout<<"\n";
+
     }
                 
         

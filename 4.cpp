@@ -18,49 +18,43 @@
 #include <random>
 #include <bitset>
 using namespace std;
-
-void testcase()
+long long int gcd(long long int  a, long long int  b)
 {
-    
-    vector<long long int> tc;
-    long long int t,v;
-    int n;
-    cin>>n;
-    for(int i=0;i<n;i++)
-    {
-       cin>>t>>v;
-       if(t==1)
-        tc.push_back(v);
-       else if(t==2)
-       {
-        if()
-       }
-    }
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
+     
+}
 
+long long int  testcase  ()
+{   
+  long long int  c1,c2;
+  cin >> c1 >> c2;
+  long long int x=min(c1,c2);
+  long long int  y=max(c1,c2);
+  
+  long long int ans= gcd(x,y);
 
-    }
-   }
+  if(ans!=1)
+  return 0;
+  if(gcd(x+1,y)!=1)
+  return 1;
+  if(gcd(x,y+1)!=1)
+  return 1;
+  else
+  return 2;
+
+}
 
 int main()
 {
-    #ifndef ONLINE_JUDGE
-    // for getting input from input.txt
-    freopen("input.txt", "r", stdin);
-    // for writing output to output.txt
-    freopen("output.txt", "w", stdout);
-#endif
-    
+  ios_base::sync_with_stdio(0);
+  cin.tie(NULL);
 
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int t;
-    cin>>t;
-    for(int i=1;i<=t;i++)
-    {
-     cout<<"\n";
-    testcase();
-    }
-                
-        
-        
- }
+  int  t;
+  cin>>t;
+  for(int i=0;i<t;i++)
+  {
+    cout<<solve()<<"\n";
+  }
+}

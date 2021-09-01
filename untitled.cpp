@@ -22,37 +22,31 @@ using namespace std;
 void testcase()
 {
    
-long long int n,k;
-cin>>n>>k;
-long long int a[k];
-for(int i=0;i<k;i++)
- cin>>a[i];
-sort(a.begin(),a.end();
-    vector<long long int> in[k];
-    long long int nu[k];
-    for(int i=0;i<n;i++)
-        for(int j=0;j<k;j++)
-        {
-            if(a[i]==in[j])
-                in.pop_back(in[j]);
-
-        }
-    for()
+long long int a;
+long long int b=0;
+cin>>a;
     
+int n=(sqrt(1+8*a)-1)/2;
+       for(int i=1;i<=n;i++)
+       {
+          long double k=((2.0*a/i)-i+1)/2.0;
+      
+            if(ceil(k)==floor(k))
+            b++;
+       }
+   
+
+    cout<<b;
+  }
 
 
 
+ 
 
-}
+
 
 int main()
 {
-    #ifndef ONLINE_JUDGE
-    // for getting input from input.txt
-    freopen("input.txt", "r", stdin);
-    // for writing output to output.txt
-    freopen("output.txt", "w", stdout);
-#endif
     
 
     ios_base::sync_with_stdio(false);

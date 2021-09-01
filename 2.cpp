@@ -21,37 +21,27 @@ using namespace std;
 
 void testcase()
 {
-    
-     int n;
-    cin>>n;
-    long long int t[n];
-    long long int v[n];
-
-    
-    
-    for(int i=0;i<n;i++)
-        {   
-
-            cin>>t[i]>>v[i];
-        }
-    for(int i=0;i<n;i++)
-    {       
+   int n;
+   cin>>n;
+   long long int arr[n];
+   for(int i=0;i<n;i++)
+   cin>>arr[i];
+   int diff[n-1];
+   for(int i=1;i<n;i++)
+    diff[i-1]=arr[i]-arr[i-1];
+  
+ 
+   
 
 
-             if(t[i]==2)
-            {   
-                if(>v)
-                cout<<pv<<"\n;
-                else
-                cout<<"-1"<<"\n;
-            }
-            else if(t==1)
-            pv=v;
 
-        }
-               
-    
-   }
+
+
+
+
+ cout<<
+
+}
 
 int main()
 {
@@ -69,8 +59,12 @@ int main()
     cin>>t;
     for(int i=1;i<=t;i++)
     {
-     cout<<"\n";
+     
+    
+    cout<<"Case #"<<i<<": "; 
     testcase();
+    cout<<"\n";
+
     }
                 
         

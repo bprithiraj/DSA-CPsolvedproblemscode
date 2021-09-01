@@ -28,23 +28,44 @@ using namespace std ;
 void testcase()
 {
     
- long long int n;
+ long long int  n;
+
+
+
   cin>>n;
 
-  unordered_map<long long int ,long long int> m;
+  long long int  arr[n];
+
 
   for(int i=0;i<n;i++)
   {
-    long long int  x;
-    cin>>x;
-    m[x]++;
+    cin>>arr[i];
   }
-  long long int  ans=0;
-  for(auto i:m)
+
+
+  
+  sort(arr,arr+n);
+
+  long long int  x=arr[n-1];
+
+  for(int i=0;i<n;i++)
   {
-    ans+=min(i.second,i.first-1);
+    arr[i]=arr[i]^x;
+
   }
-  cout<<ans;
+
+
+  long long int  sum=0;
+
+
+  for(int i=0;i<n;i++)
+
+  {
+    sum=sum|arr[i];
+  }
+
+
+  cout<<x<<" "<<sum<<"\n";
     
     
 
@@ -56,7 +77,7 @@ void testcase()
 
 
 
-  int main()
+   int main()
 {
     #ifndef ONLINE_JUDGE
     // for getting input from input.txt
@@ -67,10 +88,10 @@ void testcase()
     
 
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-     long long int q;
+    cin.tie(NULL );
+      long long int q;
     cin>>q;
-    for( long long int i=0;i<q;i++)
+    for(  long long int i=0;i<q;i++)
     {
 
 

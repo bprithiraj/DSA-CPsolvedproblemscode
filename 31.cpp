@@ -21,27 +21,62 @@ using namespace std;
 
 void testcase()
 {
-   
-long long int n,k;
-cin>>n>>k;
-long long int a[k];
-for(int i=0;i<k;i++)
- cin>>a[i];
-sort(a.begin(),a.end();
-    vector<long long int> in[k];
-    long long int nu[k];
-    for(int i=0;i<n;i++)
-        for(int j=0;j<k;j++)
-        {
-            if(a[i]==in[j])
-                in.pop_back(in[j]);
+  long long int a,b,c,d,e,f,g,h;
+  int s=0;
+  cin>>a>>b>>c>>d>>e>>f>>g>>h;
+  if((a+f)/2==d&&(a+f)%2==0)
+    s++;
+  if((a+c)/2==b&&(a+c)%2==0)
+    s++;
+  if((h+f)/2==g&&(h+f)%2==0)
+    s++;
+  if((c+h)/2==e&&(c+h)%2==0)
+    s++;
+  long long int w,x,y,z;
+  
+  
+  w=a+h;
 
-        }
-    for()
+  x=c+f;
+
+  y=b+g;
+
+  z=d+e;
+  
+
+    set<long long int,greater<long long int> > s1;
+
     
+    if((a+h)%2==0)
+    s1.insert(w);
+  if((c+f)%2==0)
+
+    s1.insert(x);
+  if((b+g)%2==0)
+
+    s1.insert(y);
+  if((d+e)%2==0)
+    s1.insert(z);
 
 
 
+    if(s1.size()==4)
+      s=s+1;
+    else if(s1.size()==3)
+      s=s+2;
+    else if(s1.size()==2)
+      s=s+3;
+    else if(s1.size()==1)
+      s=s+4;
+
+
+    cout<<s;
+
+
+
+
+
+ 
 
 }
 
